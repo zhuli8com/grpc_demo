@@ -1,0 +1,13 @@
+// 默认是 proto2
+syntax = "proto3";
+//option go_package = "path;name";
+option go_package = "/;pb";
+
+message Teacher{
+  int32 age = 1;
+  string name = 2;
+}
+
+service SayName {
+  rpc SayHello(Teacher) returns (Teacher);
+}
